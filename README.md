@@ -1,8 +1,8 @@
 # MSRR
-### A simple simulation for a two wheeled differential robot that has the ability to attach with other similar robots and can take many forms each with different functionalities.
+#### A simple simulation for a two wheeled differential robot that has the ability to attach with other similar robots and can take many forms each with different functionalities.
 
 
-What you need to know to get the simulation working:
+### What you need to know to get the simulation working:
 The codes are divided in two main packages gp_abstract_sim and simple_keys.
 Terminal Commands: 
 <ol type="i">
