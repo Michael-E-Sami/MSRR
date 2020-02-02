@@ -5,39 +5,41 @@ A simple simulation for a two wheeled differential robot that has the ability to
 What you need to know to get the simulation working:
 The codes are divided in two main packages gp_abstract_sim and simple_keys.
 Terminal Commands: 
-1.	roslaunch gp_abstract_sim start_testworld.launch
-2.	roslaunch gp_abstract_sim spawn_sdf.launch robot_name:="your robot name"
-3.	rosrun simple_keys readwrite_keys
-4.	rosrun simple_keys readStringAndCut
+<ol type="i">
+  <li>roslaunch gp_abstract_sim start_testworld.launch</li>
+  <li>roslaunch gp_abstract_sim spawn_sdf.launch robot_name:="your robot name"</li>
+  <li>rosrun simple_keys readwrite_keys</li>
+  <li>rosrun simple_keys readStringAndCut</li>
+</ol>
 
 1)	roslaunch gp_abstract_sim start_testworld.launch
 This command is for starting an empty Gazebo world. This node takes no arguments.
 
 2)	roslaunch gp_abstract_sim spawn_sdf.launch robot_name:="your robot name"
 This launch file is for spawning the modules into the world that you started from command no.1 this launch file takes the following arguments:
-•	robot_name: for naming the robot in the simulation (no default you must specify)
-•	x: Position x of the robot center by reference to world (default 0)
-•	y: Position y of the robot center by reference to world (default 0)
-•	z: Position z of the robot center by reference to world (default 0)
-•	roll: Rotation angle x in reference to world frame (default 0)
-•	pitch: Rotation angle y in reference to world frame (default 0)
-•	yaw: Rotation angle z in reference to world frame (default 0)
-•	sdf_robot_file: The path to where the SDF model is stored on your computer (default is set to the path on our test computer)
+    -	robot_name: for naming the robot in the simulation (no default you must specify)
+    -	x: Position x of the robot center by reference to world (default 0)
+    -	y: Position y of the robot center by reference to world (default 0)
+    -	z: Position z of the robot center by reference to world (default 0)
+    -	roll: Rotation angle x in reference to world frame (default 0)
+    -	pitch: Rotation angle y in reference to world frame (default 0)
+    -	yaw: Rotation angle z in reference to world frame (default 0)
+    -	sdf_robot_file: The path to where the SDF model is stored on your computer (default is set to the path on our test computer)
 
 3)	rosrun simple_keys readwrite_keys
 This node runs in the terminal and controls the modules by the keyboard but you must not leave the terminal (the terminal running this node must not lose focus) or the keyboard keys won’t control the module. The following keys are the only keys that work:
-•	W: move forward
-•	S: stop the module
-•	X: move backward
-•	A: rotate left
-•	D: rotate right
-•	Q: forward left
-•	E: forward right
-•	Z: backward left
-•	C: backward right
-•	U: rotates the tilting mechanism up
-•	J: rotates the tilting mechanism down
-•	M: stops the tilting mechanism
+    -	W: move forward
+    -	S: stop the module
+    -	X: move backward
+    -	A: rotate left
+    -	D: rotate right
+    -	Q: forward left
+    -	E: forward right
+    -	Z: backward left
+    -	C: backward right
+    -	U: rotates the tilting mechanism up
+    -	J: rotates the tilting mechanism down
+    -	M: stops the tilting mechanism
 
 4)	rosrun simple_keys readStringAndCut
 This node takes the contact sensors readings and sends signals to the modules to connect them together through topics. This node takes no arguments.
@@ -50,9 +52,9 @@ The plugins are:
 
 1)	my_speed_controller_plugin
 This is the main plugin in the module which contains subscription nodes that does the following:
-•	controls the motion
-•	controls which face attaches to which other module’s face
-•	controls the tilting mechanism
+-	controls the motion
+-	controls which face attaches to which other module’s face
+-	controls the tilting mechanism
 and this happens through four subscription nodes which are:
 1.	module_name/right_wheel_speed as the name implies controls the speed of right wheel (arguments are in float)
 2.	module_name/left_wheel_speed as the name implies controls the speed of the left wheel (arguments are in float)
