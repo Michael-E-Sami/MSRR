@@ -65,3 +65,14 @@ and this happens through four subscription nodes which are:
 2)	ContactPlugin
 This plugin is connected to the magnets on the model it also starts with the summoning of the model this plugin is connected to a contact sensor on the faces of the model when this sensor collides with anything in the world it checks what that object is if that object is other module’s collision sensor and this sensor is a small enough in order to make accurate docking.
 This plugin creates the sensor_data node which sends a string with the names of the collided links which is received by the readStringAndCut node to process it and send to the my_speed_controller_plugin node to connect them if accepted as attachable nodes.
+
+
+![](Images/Model.png)
+
+1)	The main body of the robot
+2)	The tilting mechanism
+3)	The wheels
+4)	Front face
+5)	Front face magnet
+
+There is another magnet at the back of the body other magnets to be added to the side wheels for full 3d lattice achievement, also it is too simplified masses and inertias to be adjusted and pan mechanism to be added in order to achieve more realistic motion. Material is not specified as we are constantly changing it until we find the optimum one and changing its friction and the ground friction to match the terrain it is navigating through.
