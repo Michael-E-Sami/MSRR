@@ -26,7 +26,7 @@ pi = math.pi
 #right_pub = rospy.Publisher('/ditto2/right_wheel_speed', Float32, queue_size=1000)
 
 ###########################################################################
-
+##
 def rotlecall(data):
     # rospy.loginfo(rospy.get_caller_id() + "I heard ")
     global current_x
